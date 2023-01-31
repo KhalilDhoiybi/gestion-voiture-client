@@ -5,19 +5,31 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar
+      className="page-navbar"
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+    >
       <Container>
-        <Navbar.Brand as={NavLink} to="/dashboard">
+        <Navbar.Brand as={NavLink} to="/">
           Gestions Des Voitures
         </Navbar.Brand>
-        <Nav>
-          <Nav.Link as={NavLink} to="/dashboard">
-            Dashboard
-          </Nav.Link>
-          <Nav.Link as={NavLink} to="/addnew">
-            Ajouter Voiture
-          </Nav.Link>
-        </Nav>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          className="justify-content-end"
+        >
+          <Nav>
+            <Nav.Link as={NavLink} to="/">
+              Dashboard
+            </Nav.Link>
+            <Nav.Link as={NavLink} to="/addnew">
+              Ajouter Voiture
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   );

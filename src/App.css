@@ -1,6 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #181a1b;
   color: white;
+}
+.page-navbar {
+  height: 8vh;
+}
+.data-table {
+  width: 100%;
+  height: 92vh;
 }
